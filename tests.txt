@@ -1,0 +1,273 @@
+// Jake Huey
+// CSC 365
+// Lab 1-a test suite
+
+// (------------------------------------------------------------------------)
+
+// TC-1
+// Tests Requirements R4, R3
+// Short form command, existing student
+// Expected output: COMO, ZANDRA: Grade 4, Classroom 112, Teacher: PERLA CHIONCHIO
+S: COMO
+
+// TC-2
+// Tests Requirements R4, R3
+// Long form command, existing student
+// Expected output: COMO, ZANDRA: Grade 4, Classroom 112, Teacher: PERLA CHIONCHIO
+Student: COMO
+
+// TC-3
+// Tests Requirements R4, R3
+// Short form command, non-existing student
+// Expected output: No student found with last name 'DOE'.
+S: DOE
+
+// TC-4
+// Tests Requirements R4, E1
+// Long form command, existing student, extra input
+// Expected output: Invalid command. Try again.
+Student: COMO COMO
+
+// (------------------------------------------------------------------------)
+
+// TC-5
+// Tests Requirements R5, R3
+// Short form with bus route flag, existing student
+// Expected output: EARLY, TORY: Bus Route 52
+S: EARLY B
+
+// TC-6
+// Tests Requirements R5, R3
+// Short form with bus route flag, existing student
+// Expected output: EARLY, TORY: Bus Route 52
+S: EARLY Bus
+
+// TC-7
+// Tests Requirements R5, R3
+// Long form with bus route flag, existing student
+// Expected output: EARLY, TORY: Bus Route 52
+Student: EARLY B
+
+// TC-8
+// Tests Requirements R5, R3
+// Long form with bus route flag, existing student
+// Expected output: EARLY, TORY: Bus Route 52
+Student: EARLY Bus
+
+// TC-9
+// Tests Requirements R5, E1
+// Short form with bus route flag, non-existing student
+// Expected output: No student found with last name 'DOE'.
+S: DOE B
+
+// (------------------------------------------------------------------------)
+
+
+// TC-10
+// Tests Requirements R7, R3
+// Short form Grade search, existing grade, without high/low
+// Expected output: List of all students in grade 4 with classroom and teacher information
+G: 4
+
+// TC-11
+// Tests Requirements R7, R3
+// Long form Grade search, existing grade, without high/low
+// Expected output: List of all students in grade 4 with classroom and teacher information
+Grade: 4
+
+// TC-12
+// Tests Requirements R9, R3
+// Short form Grade search, existing grade, highest GPA
+// Expected output: Highest GPA student in grade 4 with full details
+G: 4 H
+
+// TC-13
+// Tests Requirements R9, R3
+// Long form Grade search, existing grade, highest GPA
+// Expected output: Highest GPA student in grade 4 with full details
+G: 4 High
+
+// TC-14
+// Tests Requirements R9, R3
+// Long form Grade search, existing grade, highest GPA
+// Expected output: Highest GPA student in grade 4 with full details
+Grade: 4 High
+
+// TC-15
+// Tests Requirements R9, R3
+// Short form Grade search, existing grade, lowest GPA
+// Expected output: Lowest GPA student in grade 4 with full details
+G: 4 L
+
+// TC-16
+// Tests Requirements R9, R3
+// Short form Grade search, existing grade, lowest GPA
+// Expected output: Lowest GPA student in grade 4 with full details
+G: 4 Low
+
+// TC-17
+// Tests Requirements R9, R3
+// Long form Grade search, existing grade, lowest GPA
+// Expected output: Lowest GPA student in grade 4 with full details
+Grade: 4 L
+
+// TC-18
+// Tests Requirements R9, E1
+// Short form Grade search, invalid grade (no students present)
+// Expected output: No students found in grade 10
+G: 10
+
+// (------------------------------------------------------------------------)
+
+// TC-19
+// Tests Requirements R6, R3
+// Short form Teacher search, existing teacher
+// Expected output: List of students taught by MR. HAMER
+T: HAMER
+
+// TC-20
+// Tests Requirements R6, R3
+// Long form Teacher search, existing teacher
+// Expected output: List of students taught by MR. HAMER
+Teacher: HAMER
+
+// TC-21
+// Tests Requirements R6, E1
+// Short form Teacher search, existing teacher, extra input
+// Expected output: Invalid command. Try again.
+T: HAMER HAMER
+
+
+// TC-22
+// Tests Requirements R6, E1
+// Short form Teacher search, non-existing teacher
+// Expected output: No teacher found with last name: 'DOE'.
+T: DOE
+
+// (------------------------------------------------------------------------)
+
+// TC-23
+// Tests Requirements R8, R3
+// Short form Bus route search, existing bus route
+// Expected output: List of students on bus route 51 with names, grades, classrooms
+B: 51
+
+// TC-24
+// Tests Requirements R8, R3
+// Long form Bus route search, existing bus route
+// Expected output: List of students on bus route 51 with names, grades, classrooms
+Bus: 51
+
+// TC-25
+// Tests Requirements R8, E1
+// Short form Bus route search, non-existing bus route
+// Expected output: No students found on bus route: 99
+B: 99
+
+// TC-26
+// Tests Requirements R8, E1
+// Long form Bus route search, non-existing bus route
+// Expected output: No students found on bus route: 99
+Bus: 99
+
+// (------------------------------------------------------------------------)
+
+// TC-27
+// Tests Requirements R10, R3
+// Short form Average GPA search, existing grade
+// Expected output: Average GPA for Grade 1: 3.00
+A: 1
+
+// TC-28
+// Tests Requirements R10, R3
+// Long form Average GPA search, existing grade
+// Expected output: Average GPA for Grade 1: 3.00
+Average: 1
+
+// TC-29
+// Tests Requirements R10, R3
+// Long form Average GPA search, non-existing grade
+// Expected output: No students found in grade: 0
+Average: 0
+
+// TC-29
+// Tests Requirements R10, E1
+// Long form Average GPA search, existing grade, extra input
+// Expected output: Invalid command. Try again.
+Average: 1 2
+
+// (------------------------------------------------------------------------)
+
+// TC-30
+// Tests Requirements R11, R3
+// Short form Info command
+// Expected output: Display a list of grades sorted in ascending order, along with the respective number of students in each grade
+I
+
+// TC-31
+// Tests Requirements R11, R3
+// Long form Info command
+// Expected output: Display a list of grades sorted in ascending order, along with the respective number of students in each grade
+Info
+
+// TC-32
+// Tests Requirements R11, E1
+// Long form Info command 
+// Expected output: Invalid command. Try again.
+Info 1
+
+// (------------------------------------------------------------------------)
+
+// TC-33
+// Tests Requirements R12
+// Short form Quit command
+// Expected behavior: Program terminates
+Q
+
+// TC-34
+// Tests Requirements R12
+// Long form Quit command
+// Expected behavior: Program terminates
+Quit
+
+// TC-35
+// Tests Requirements R12
+// Invalid quit command
+// Expected Output: Invalid command. Try again.
+q
+
+// (------------------------------------------------------------------------)
+
+// TC-36
+// Tests Requirements R13, R3, R2
+// Command: python3 schoolsearch.py
+// Expected Behavior: Program starts and asks for user input "Enter command: ". 
+
+// TC-37
+// Tests Requirement R13, E1
+// Verify behavior when students.txt is missing from the directory.
+// Setup: Remove or rename students.txt from the working directory.
+// Command: python3 schoolsearch.py
+// Expected Behavior: "Error: students.txt file not found" and exits immediately.
+
+
+// (------------------------------------------------------------------------)
+
+// TC-36
+// Tests Requirement R1, R3, R2
+// Run the program from the command line without arguments on a standard Linux/BSD machine
+// Command: python3 schoolsearch.py
+// Expected behavior: The program should start and ask for user input "Enter command: ".
+
+// (------------------------------------------------------------------------)
+
+// TC-36
+// Tests Requirement E1
+// Ensure students.txt is in the wrong format
+// Command: python3 schoolsearch.py
+// Note: I have provided a fakestudents.txt that is missing a column
+// Expected behavior: Error: Incorrect data format in students.txt
+
+// (------------------------------------------------------------------------)
+
+
