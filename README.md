@@ -27,3 +27,14 @@ Goal: we want to be able to query the database for these types of data.
 - `T MIGLER`
 - `G 2 H`
 - `Quit`
+
+## How to Run the Program
+
+1. Ensure you have **Python 3.x** installed on your machine.
+2. Place the `students.txt` file in the same directory as the `schoolsearch.py` script if it is not already present.
+3. Open a terminal and navigate to the directory containing the program files.
+4. Run the program using the following command:
+   ```bash
+   python3 schoolsearch.py
+
+
