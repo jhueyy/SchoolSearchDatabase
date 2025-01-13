@@ -1,5 +1,6 @@
 # School Search DBMS
 Description: This program simulates a simple DBMS with Python. Given a text-file, with data format:
+
 `<StLastName, StFirstName, Grade, Classroom, Bus, GPA, TLastName, TFirstName>`
 
 Goal: we want to be able to query the database for these types of data.
