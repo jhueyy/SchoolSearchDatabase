@@ -37,4 +37,3 @@ Goal: we want to be able to query the database for these types of data.
    ```bash
    python3 schoolsearch.py
 
-
